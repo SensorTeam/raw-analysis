@@ -23,11 +23,11 @@ def batch_postprocess(images):
 		with rawpy.imread(image) as raw:
 			postprocessed = raw.postprocess(gamma=(1,1), no_auto_bright=True, output_bps=8)
 			imageio.imsave(generate_output_name(image), postprocessed)
+			print('PROCESSED: ', image)
 
 def main():
 	images = get_filenames_from(INPUT_FOLDER)
-	for image in images:
-		print(generate_output_name(image))
+	batch_postprocess(images)
 
 # Start the show
 # -----------------------------
