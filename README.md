@@ -8,6 +8,8 @@ Analyses a folder of RAW images and creates graphs based on trends. (Currently a
 * `pip`
 * `virtualenv`
 
+Also, ensure you have the folders `data` and `data/output` created.
+
 ## Setup
 
 1. Clone this repo
